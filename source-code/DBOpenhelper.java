@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class DBOpenhelper {
+public class DBOpenhelper extends SQLiteOpenHelper{
 	
 	private static final String DATABASE_NAME = "data";
 	private static final int DATABASE_VERSION = 1;
@@ -15,7 +15,7 @@ public class DBOpenhelper {
 		+ "name text not null, "
 		+ "tag text not null";
 
-	private static final String TABLE_SERCH="PRAGMA TABLE_INFO(CREATE_SCHEDULE_TABLE_SQL)";
+	private static final String TABLE_SERCH="PRAGMA TABLE_INFO(CREATE_LIST_TABLE_SQL)";
 	private static final String DROP_LIST_TABLE_SQL = "drop table if exists DB";
 
 	public DBOpenhelper(Context context) {
